@@ -1,8 +1,11 @@
 import "./button.css";
-import buttonText from "./button-text.html";
-import buttonLogo from "./button-logo.html";
+
+import playbtn from "./btnPlay.html";
+import sharebtn from "./btnShare.html";
+import favoritebtn from "./btnFavorites.html";
 
 export default { title: "Components/Button" };
 
-export const withText = () => buttonText;
-export const withLogo = () => buttonLogo;
+export const btnPlay = () => playbtn;
+export const btnShare = () => sharebtn;
+export const btnFavorites = () => favoritebtn;
