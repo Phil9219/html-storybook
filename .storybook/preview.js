@@ -5,8 +5,8 @@ import "../src/global.css";
 
 addDecorator(centered);
 addParameters({
-    a11y: {
-      config: {},
-      options: {}
-    },
-  });
+  a11y: {
+    config: {},
+    options: {},
+  },
+});
