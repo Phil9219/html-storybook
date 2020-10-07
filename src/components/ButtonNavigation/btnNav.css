@@ -1,11 +1,23 @@
-.logo {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
+.btnNav {
+  color: white;
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
-.title {
-  text-align: center;
-  margin-top: 1px;
-  color: white;
+.btnNav > :nth-child(1) {
+  background-color: tomato;
+  padding: 48px;
+}
+
+.btnNav > :nth-child(2) {
+  background-color: tomato;
+  padding: 48px;
+}
+
+.btnNav > :nth-child(3) {
+  background-color: tomato;
+  padding: 48px;
 }
