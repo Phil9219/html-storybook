@@ -1,0 +1,16 @@
+.track {
+  display: flex;
+  background-color: #181b2c;
+}
+
+.track__image {
+  border-radius: 75px;
+}
+
+.track__button {
+  background-color: #181b2c;
+}
+
+.track__descript {
+  display: grid;
+}
