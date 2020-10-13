@@ -7,11 +7,9 @@ export function createTrackElement(title, artist) {
   divElement.className = "track";
 
   const titleElement = document.createElement("h3");
-  titleElement.innerText = title; // <h3>Billie Jean</h3>
-
+  titleElement.innerText = title;
   const artistElement = document.createElement("p");
-  artistElement.innerText = artist; // <p>Michael Jackson</p>
-
+  artistElement.innerText = artist;
   const imgElement = document.createElement("img");
   imgElement.src = michaelJacksonCoverPic;
   imgElement.alt = `Image of ${artist}`;
@@ -20,7 +18,7 @@ export function createTrackElement(title, artist) {
   const buttonElement = document.createElement("button");
   const playButtonImage = document.createElement("img");
   playButtonImage.src = playActionButton;
-  imgElement.className = "track__button";
+  buttonElement.className = "track__button";
 
   const descriptionElement = document.createElement("div");
   descriptionElement.className = "track__descript";

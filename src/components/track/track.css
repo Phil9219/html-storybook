@@ -1,16 +1,45 @@
 .track {
   display: flex;
   background-color: #181b2c;
+  width: 100%;
+  justify-content: space-between;
 }
 
+/* .track > :not(:last-child) {
+  margin-right: 20px;
+} */
 .track__image {
-  border-radius: 75px;
+  height: 50px;
+  height: 46px;
+  width: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 .track__button {
-  background-color: #181b2c;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--foot-note-font-color);
+}
+
+.track__button > img {
+  margin: 0;
 }
 
 .track__descript {
-  display: grid;
+  border-bottom: 1px solid var(--foot-note-font-color);
+  flex-grow: 1;
+}
+
+.track__descript > h3 {
+  margin: 0 0 3px 0;
+  font-size: 0.8125rem;
+  color: var(--title-font-color);
+}
+
+.track__descript > p {
+  margin: 5px 0;
+  font-size: 0.625rem;
+  color: var(--foot-note-font-color);
 }
