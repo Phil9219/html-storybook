@@ -1,18 +1,18 @@
 import "./track.css";
-import michaelJacksonCoverPic from "../../assets/BillieJeanPic.png";
+
 import playActionButton from "../../assets/playActionButton.svg";
 
-export function createTrackElement(title, artist) {
+export function createTrackElement(track) {
   const divElement = document.createElement("div");
   divElement.className = "track";
 
   const titleElement = document.createElement("h3");
-  titleElement.innerText = title;
+  titleElement.innerText = track.title;
   const artistElement = document.createElement("p");
-  artistElement.innerText = artist;
+  artistElement.innerText = track.artist;
   const imgElement = document.createElement("img");
-  imgElement.src = michaelJacksonCoverPic;
-  imgElement.alt = `Image of ${artist}`;
+  imgElement.src = track.imgsrc;
+  imgElement.alt = `Image of ${track.artist}`;
   imgElement.className = "track__image";
 
   const buttonElement = document.createElement("button");
@@ -25,9 +25,10 @@ export function createTrackElement(title, artist) {
   descriptionElement.append(titleElement, artistElement);
   divElement.append(imgElement, descriptionElement, buttonElement);
 
+  const audioElement = new Audio(track.audio);
   buttonElement.append(playButtonImage);
   buttonElement.onclick = function () {
-    alert(`CLick`);
+    audioElement.play();
   };
 
   return divElement;
