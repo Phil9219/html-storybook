@@ -5,17 +5,6 @@ import pauseActionButton from "../../assets/icon-pause-gradient.svg";
 
 export function createTrackElement(track) {
   const divElement = document.createElement("div");
-
-  const showPlayIcon = (actionIcon) => {
-    actionIcon.src = playActionButton;
-    actionIcon.alt = "Play Button";
-  };
-
-  const showPauseIcon = (actionIcon) => {
-    actionIcon.src = pauseActionButton;
-    actionIcon.alt = "Pause Button";
-  };
-
   divElement.className = "track";
 
   const titleElement = document.createElement("h3");
@@ -78,3 +67,13 @@ export function createTrackElement(track) {
 
   return divElement;
 }
+
+const showPlayIcon = (actionIcon) => {
+  actionIcon.src = playActionButton;
+  actionIcon.alt = "Play Button";
+};
+
+const showPauseIcon = (actionIcon) => {
+  actionIcon.src = pauseActionButton;
+  actionIcon.alt = "Pause Button";
+};
