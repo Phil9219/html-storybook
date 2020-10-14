@@ -5,6 +5,17 @@ import pauseActionButton from "../../assets/icon-pause-gradient.svg";
 
 export function createTrackElement(track) {
   const divElement = document.createElement("div");
+
+  const showPlayIcon = (actionIcon) => {
+    actionIcon.src = playActionButton;
+    actionIcon.alt = "Play Button";
+  };
+
+  const showPauseIcon = (actionIcon) => {
+    actionIcon.src = pauseActionButton;
+    actionIcon.alt = "Pause Button";
+  };
+
   divElement.className = "track";
 
   const titleElement = document.createElement("h3");
@@ -29,20 +40,40 @@ export function createTrackElement(track) {
   descriptionElement.append(titleElement, artistElement);
   divElement.append(imgElement, descriptionElement, buttonElement);
 
-  let isPlaying = false;
-
   const audioElement = new Audio(track.audio);
   buttonElement.append(playButtonImage);
+
+  let isPlaying = false;
+
+  // const showPlayIcon = function () {
+  //   playButtonImage.src = playActionButton;
+  //   playButtonImage.alt = "Play Button";
+  // };
+
+  // const showPlayIcon = () => {            // Arrow Function
+  //   playButtonImage.src = playActionButton;
+  //   playButtonImage.alt = "Play Button";
+  // };
+  // function showPauseIcon() {           // else markieren, Glühbirne, extrahieren.
+  //     playButtonImage.src = pauseActionButton;
+  //     playButtonImage.alt = "Pause Button";
+  //   }
+  // }
+  //   const showPauseIcon = () => {
+  //     playButtonImage.src = pauseActionButton;
+  //     playButtonImage.alt = "Pause Button"
+  // }
+
   buttonElement.onclick = function () {
     if (isPlaying === true) {
       audioElement.pause();
-      playButtonImage.src = playActionButton;
-      isPlaying = false;
+      showPlayIcon(playButtonImage);
     } else {
       audioElement.play();
-      playButtonImage.src = pauseActionButton;
-      isPlaying = true;
+      showPauseIcon(playButtonImage);
     }
+
+    isPlaying = !isPlaying;
   };
 
   return divElement;
