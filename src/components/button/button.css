@@ -11,8 +11,8 @@
   height: 20px;
 }
 
-.action {
-  background-image: linear-gradient(#ed8770, #d9519d);
+.btn--action {
+  background-image: linear-gradient(180deg, #ed8770, #d9519d);
   border: none;
 }
 
