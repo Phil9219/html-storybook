@@ -27,18 +27,18 @@
   margin: 0;
 }
 
-.track__descript {
+.track__description {
   border-bottom: 1px solid var(--foot-note-font-color);
   flex-grow: 1;
 }
 
-.track__descript > h3 {
+.track__description > h3 {
   margin: 0 0 3px 0;
   font-size: 0.8125rem;
   color: var(--title-font-color);
 }
 
-.track__descript > p {
+.track__description > p {
   margin: 5px 0;
   font-size: 0.625rem;
   color: var(--foot-note-font-color);
