@@ -1,0 +1,28 @@
+.app-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: ;
+  height: 100vh;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  background: #151827;
+  box-shadow: 0 -4px 10px black;
+}
+
+.bottomBtn {
+  display: flex;
+  flex-flow: column;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 280px;
+  margin: 10px auto;
+}
